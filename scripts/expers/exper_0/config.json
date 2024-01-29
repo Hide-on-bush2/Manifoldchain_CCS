@@ -1,0 +1,27 @@
+{
+  "shard_num": 5,
+  "shard_size": 5,
+  "block_size": 2048,
+  "confirmation_depth": 6,
+  "mining_interval": 0,
+  "tx_generation_interval": 25000000,
+  "runtime": 2000,
+  "iteration": 25,
+  "inclusive_diff": "0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+  "exclusive_diffs": [
+    "0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+    "000000e7ae147ae147ae147ae147ae147ae147ae147ae147ae147ae147ae1479",
+    "00000188f5c28f5c28f5c28f5c28f5c28f5c28f5c28f5c28f5c28f5c28f5c28c",
+    "0000025851eb851eb851eb851eb851eb851eb851eb851eb851eb851eb851eb80",
+    "000002d999999999999999999999999999999999999999999999999999999993"
+  ],
+  "propagation_delay": 100,
+  "bandwidths": [
+    [5000, 5000, 5000, 5000, 5000],
+    [10000, 10000, 10000, 10000, 10000],
+    [20000, 20000, 20000, 20000, 20000],
+    [40000, 40000, 40000, 40000, 40000],
+    [60000, 60000, 60000, 60000, 60000]
+  ],
+  "description": "test for debug version"
+}
