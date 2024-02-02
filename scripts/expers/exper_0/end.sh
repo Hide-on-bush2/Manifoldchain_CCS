@@ -2,8 +2,8 @@
 
 shard_num=5
 shard_size=5
-exper_number=52
-iter=25
+exper_number=0
+iter=0
 
 cd ../../virtual_network_operation/
 ./end_node.sh $shard_num $shard_size

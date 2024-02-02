@@ -6,7 +6,8 @@
   "mining_interval": 0,
   "tx_generation_interval": 25000000,
   "runtime": 2000,
-  "iteration": 25,
+  "iteration": 0,
+  "domestic_ratio": 0.7,
   "inclusive_diff": "0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
   "exclusive_diffs": [
     "0000007fffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
@@ -23,5 +24,5 @@
     [40000, 40000, 40000, 40000, 40000],
     [60000, 60000, 60000, 60000, 60000]
   ],
-  "description": "test for debug version"
+  "description": "test for demo"
 }

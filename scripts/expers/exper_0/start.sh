@@ -4,11 +4,11 @@ shard_size=5
 mining_interval=0
 tx_generation_interval=25000000
 runtime=2000
-iter=25
-exper_number=52
+iter=0
+exper_number=0
 sudo rm -r ../../../DB/*
 ./start_nodes.sh
-sleep 60
+sleep 120
 cd ../../virtual_network_operation/
 for ((k=0; k<$shard_num; k++))
 do

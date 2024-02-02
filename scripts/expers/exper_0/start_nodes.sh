@@ -29,6 +29,6 @@ do
   for ((j=0; j<5; j++))
   do
     node_id=$[i*5+j]
-    ./nodes/start_node_$node_id.sh 2>&1 | tee ../../../log/exper_52/$node_id.log &
+    ./nodes/start_node_$node_id.sh 2>&1 | tee ../../../log/exper_0/$node_id.log &
   done
 done

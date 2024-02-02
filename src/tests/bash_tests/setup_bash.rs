@@ -46,6 +46,7 @@ pub struct ConfigData {
     mining_interval: usize, //the interval(ms) between two mining operations
     tx_generation_interval: usize, //the interval(ms) between two tx generations
     runtime: usize, //how long the experiment will run (10 s)
+    domestic_ratio: f64,
     iteration: usize, //the iteration of this experiment
     inclusive_diff: String, //inclusive difficulty (all shard shares the same inclusive diff)
     exclusive_diffs: Vec<String>, //exclusive difficulties across all shards
@@ -130,6 +131,7 @@ fn generate_exper_bash(exper_number: usize, config: &ConfigData) -> Result<(), E
             let shard_size_cmd = format!("--shardSize {}", config.shard_size);
             let block_size_cmd = format!("--blockSize {}", config.block_size);
             let confirmation_depth_cmd = format!("--k {}", config.confirmation_depth);
+            let domestic_ratio_cmd = format!("--domesticRatio {}", config.domestic_ratio);
             let total_diff_cmd = format!("--eDiff {}", exclusive_diff);
             let inclusive_diff_cmd = format!("--iDiff {}", config.inclusive_diff);
             let mut final_cmd: String = back_to_root.clone();
@@ -147,6 +149,7 @@ fn generate_exper_bash(exper_number: usize, config: &ConfigData) -> Result<(), E
             final_cmd = format!("{} {}", final_cmd, shard_size_cmd);
             final_cmd = format!("{} {}", final_cmd, block_size_cmd);
             final_cmd = format!("{} {}", final_cmd, confirmation_depth_cmd);
+            final_cmd = format!("{} {}", final_cmd, domestic_ratio_cmd);
             final_cmd = format!("{} {}", final_cmd, total_diff_cmd);
             final_cmd = format!("{} {}", final_cmd, inclusive_diff_cmd);
             let path = format!("{}start_node_{}.sh", nodes_path.clone(), node_id);
